@@ -2,11 +2,11 @@
 
 ## Introduction 
 
-The introduction consists of a brief explanation of the subject to be the source of our guide. The introduction should be kept short.
+The introduction consists of a brief explanation of the subject to be the source of our turotial. The introduction should be kept short.
 
 ## Pre-requisites
 
-Pre-requisites consists of all the required knowledge to understand the guide. It may also contain lists of pre-required software/hardware in some content.
+Pre-requisites consists of all the required knowledge to understand the tutorial. It may also contain lists of pre-required software/hardware in some content.
 
 ## Steps 
 
