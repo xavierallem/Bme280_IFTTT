@@ -13,6 +13,6 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wformat=2 -Wall -Wextra -Winline -pipe")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
 
 # Add rules to create the binary files
-add_executable(problem1 iftt.cxx iftt_example.cxx)
+add_executable(problem1 iftt.cxx iftt_example.cxx bme280.cxx)
 
 target_link_libraries(problem1 PUBLIC  -lm -lcurl)
