@@ -1,10 +1,12 @@
-/** @file <file_name>.c
- *  @brief Give a description of the file 
+/** @file ifttt.cxx
+ *  @brief  description of the file 
  *  
- *  Give full description of the file 
+ *  The program sends values to ifttt webhook
+ * if the temperature from bme280 is above 30
+ * and if the ram usage is above 100MB
  *  
- *  @author Full name of the author 
- *  @bug List Any bugs found in the file  
+ *  @author Allen Xavier
+ *  @bug None yet  
  */
 
 /*
