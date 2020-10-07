@@ -51,7 +51,7 @@ using namespace rapidjson;
  */
 
 int main(){
-    /* initializing usage struct */
+        /* initializing usage struct */
 	struct rusage r_usage;
 	/* getting perforamcne parameters */
 	getrusage(RUSAGE_SELF,&r_usage);
@@ -60,8 +60,9 @@ int main(){
 	printf("Enter TheIFTTT Auth key \n");
 	/* Take input of auth key */
 	scanf("%[^\n]%*c", auth);
-    /* Get termperature */
+        /* Get termperature */
         float temperature = getTemperature(); 
+        /* Check condition 1 */
 	if(temperature>30)
 	{
 		/*Json file to be parsed*/
@@ -80,6 +81,7 @@ int main(){
 		/* Publish the json values and auth */
 		POST_IFTTT(buffer.GetString(),auth);
 	}
+	/* Check conditon 2 */
 	if(r_usage.ru_idrss>1,000,000){
 		
 		const char* json1;
