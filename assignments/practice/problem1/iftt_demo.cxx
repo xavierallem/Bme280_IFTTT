@@ -51,7 +51,9 @@ using namespace rapidjson;
  */
 
 int main(){
+    /* initializing usage struct */
 	struct rusage r_usage;
+	/* getting perforamcne parameters */
 	getrusage(RUSAGE_SELF,&r_usage);
 	/* Variable to store auth key*/
 	chat auth[50];
@@ -59,7 +61,7 @@ int main(){
 	/* Take input of auth key */
 	scanf("%[^\n]%*c", auth);
     /* Get termperature */
-    float temperature = getTemperature(); 
+        float temperature = getTemperature(); 
 	if(temperature>30)
 	{
 		/*Json file to be parsed*/
@@ -90,7 +92,7 @@ int main(){
 		StringBuffer buffer1;
 		/*Wrtier stream-*/
 		Writer<StringBuffer> writer(buffer1);
-		/* Write the JSON document `d` into the buffer`*/
+		/* Write the JSON document `d1` into the buffer`*/
 		d1.Accept(writer);
 		/* Publish the json values and auth */
 		POST_IFTTT(buffer1.GetString(),auth);
