@@ -42,7 +42,7 @@
 *  @return void
 */
 
-void POST_IFTTT (const char *ptr,const char *ptr1)
+void POST_IFTTT (const char *post_data,const char *auth_key)
 {
 	
 	/*Create Curl instance*/
@@ -59,10 +59,10 @@ void POST_IFTTT (const char *ptr,const char *ptr1)
 	just as well be a https:// URL if that is what should receive the
 	data. */ 
 		char str[50];
-		sprintf(str,"https://maker.ifttt.com/trigger/{event}/with/key/%s",ptr1);
+		sprintf(str,"https://maker.ifttt.com/trigger/{event}/with/key/%s",auth_key);
 		curl_easy_setopt(curl, CURLOPT_URL, str);
 		/* Now specify the POST data */ 
-		curl_easy_setopt(curl, CURLOPT_POSTFIELDS, ptr);
+		curl_easy_setopt(curl, CURLOPT_POSTFIELDS, post_data);
 
 		/* Perform the request, res will get the return code */ 
 		res = curl_easy_perform(curl);
