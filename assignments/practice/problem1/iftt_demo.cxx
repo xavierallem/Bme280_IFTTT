@@ -58,10 +58,15 @@ int main(){
 	/* getting perforamcne parameters */
 	getrusage(RUSAGE_SELF,&r_usage);
 	/* Variable to store auth key*/
-	chat auth[50];
+	char auth[50];
+	/* Variable to store event name*/
+	char event[50];
 	printf("Enter TheIFTTT Auth key \n");
 	/* Take input of auth key */
 	scanf("%[^\n]%*c", auth);
+	printf("Enter TheIFTTT event \n");
+	/* Take input of even */
+	scanf("%[^\n]%*c", event);
         /* Get termperature */
         float temperature = getTemperature(); 
         /* Check condition 1 */
@@ -81,7 +86,7 @@ int main(){
 		/* Write the JSON document `d` into the buffer`*/
 		d.Accept(writer);
 		/* Publish the json values and auth */
-		POST_IFTTT(buffer.GetString(),auth);
+		POST_IFTTT(buffer.GetString(),auth,event);
 	}
 	/* Check conditon 2 */
 	if(r_usage.ru_idrss>1,000,000){
@@ -99,7 +104,7 @@ int main(){
 		/* Write the JSON document `d1` into the buffer`*/
 		d1.Accept(writer);
 		/* Publish the json values and auth */
-		POST_IFTTT(buffer1.GetString(),auth);
+		POST_IFTTT(buffer1.GetString(),auth,event);
 
 
 	}
