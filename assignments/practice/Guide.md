@@ -7,7 +7,7 @@ This API along with its documentation makes even for new developers to cope up w
 
 ## How does it work?
 
-- The function `PST_IFTTT` takes two adress of string as arguments which are `post_data` & `auth_key`. `poat_data` is the data to be punlished in  ifttt platform & `auth_key` is the unique *Authentication Key* used to acess the ifttt platform 
+- The function `PST_IFTTT` takes two adress of string as arguments which are `post_data` & `auth_key`. `poat_data` is the data to be published in  ifttt platform & `auth_key` is the unique *Authentication Key* used to acess the ifttt platform 
 ```c++
 void POST_IFTTT (const char *post_data,const char *auth_key)
 ```
