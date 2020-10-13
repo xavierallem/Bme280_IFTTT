@@ -11,7 +11,7 @@ This API along with its documentation makes even for new developers to cope up w
 ```c++
 void POST_IFTTT (const char *post_data,const char *auth_key)
 ```
-- Next we need curl api to connect to ifttt platform
+- Next we use curl api to connect to ifttt platform
 ```c++
 /*Create Curl instance*/
 CURL *curl;
