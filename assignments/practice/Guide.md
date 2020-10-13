@@ -7,9 +7,9 @@ This API along with its documentation makes even for new developers to cope up w
 
 ## How does it work?
 
-- The function `PST_IFTTT` takes two adress of string as arguments which are `post_data` & `auth_key`. `poat_data` is the data to be published in  ifttt platform & `auth_key` is the unique *Authentication Key* used to acess the ifttt platform 
+- The function `PST_IFTTT` takes three adress of string as arguments which are `post_data` , `auth_key` & `your_event`. `poat_data` is the data to be published in  ifttt platform & `auth_key` is the unique *Authentication Key* used to acess the ifttt platform. The last parameter is the name of your event 
 ```c++
-void POST_IFTTT (const char *post_data,const char *auth_key)
+void POST_IFTTT (const char *post_data,const char *auth_key,const char your_event)
 ```
 - Next we use curl api to connect to ifttt platform
 ```c++
